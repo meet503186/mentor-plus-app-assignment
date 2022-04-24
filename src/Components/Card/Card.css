@@ -1,0 +1,237 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-container {
+  width: 330px;
+  box-shadow: 0px 0px 9px -4px black;
+  border-radius: 15px;
+  margin: 0 50px;
+}
+
+.card-container:first-child {
+  margin: 0 100px;
+}
+
+.card-container:last-child {
+  margin-right: 100px;
+}
+
+.section-1 {
+  padding: 20px;
+  background-color: #fafafa;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.section-1.Best {
+  background-color: #deffd8;
+}
+
+.section-1 > .heading {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.offer-status-and-percentage-container {
+  display: flex;
+}
+
+.offer-status-container {
+  width: 100%;
+}
+
+.offer-status {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.offer-status-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.offer-timer {
+  display: flex;
+  margin-left: -7px;
+    margin-top: 20px;
+}
+
+.days-container,
+.hrs-container,
+.mins-container,
+.secs-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.days,
+.hrs,
+.mins {
+  border-right: 1px solid #a1a1a1;
+}
+
+.days,
+.hrs, 
+.mins,
+.secs {
+  font-size: 18px;
+    font-weight: bold;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.days-text,
+.hrs-text,
+.mins-text,
+.secs-text {
+  font-size: 12px;
+  margin-top: 3px;
+  font-weight: 500;
+  color: #a1a1a1;
+}
+
+.offer-booked-percentage {
+  width: 130px;
+}
+
+.percentage {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.booked-text {
+  font-size: 12px;
+  color: #a1a1a1;
+  font-weight: 500;
+}
+
+.CircularProgressbar-text,
+.CircularProgressbar-path {
+  stroke-width: 5 !important;
+}
+
+.saver-container {
+  margin-bottom: 15px;
+}
+
+.saver {
+  display: inline-block;
+  background: #1e4d8e;
+  color: white;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-weight: 500;
+}
+
+.saver.VIP {
+  background-color: #9a155d;
+}
+
+.saver.Super {
+  background-color: #129b1e;
+}
+
+.saver.Best {
+  background-color: #2c9090;
+}
+
+.section-2 {
+  padding: 15px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.section-2.Best {
+  background-color: #eeffeb;
+}
+
+.section-2 > .heading {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.content {
+  margin: 10px 25px;
+  font-size: 14px;
+}
+
+.content-item {
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+.suit {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #555555;
+}
+
+.referral {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b5693;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  margin-top: 8px;
+  padding: 0 10px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  border-top: 0.5px solid #e8e8e8;
+}
+
+.new-price {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.save-percentage {
+  font-weight: bold;
+  font-size: 17px;
+  width: 55%;
+  color: #d0302f;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.buy-btn {
+  margin: 5px 25px;
+  margin-bottom: 0;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  background-color: #1e4d8e;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.buy-btn.Weekly {
+  background-color: #d3d3d3;
+  color: black;
+}

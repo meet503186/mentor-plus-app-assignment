@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Header from "./Components/Header/Header";
+import Card from "./Components/Card/Card";
+import "./App.css";
+import axios from "axios";
 
-function App() {
+function App(props) {
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const res = await axios({
+        method: "GET",
+        url: "https://demo3755793.mockable.io/plans",
+      });
+
+      let data = await res.data;
+      setData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Header />
+      <div className="container">
+        <h1>Buy a plan and be Interview ready!</h1>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: `1fr 1fr 1fr 1fr`,
+            width: "100%",
+            overflow: "scroll",
+            height: "100%",
+            paddingBottom: "100px",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <Card data={data} />
+        </div>
+      </div>
     </div>
   );
 }
